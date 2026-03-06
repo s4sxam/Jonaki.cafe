@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-jonaki-bg: #000000;
+  --color-jonaki-glow: #D1FF4D;
+  --color-jonaki-gold: #F5C542;
+  --color-jonaki-text-primary: #FFFFFF;
+  --color-jonaki-text-secondary: #BDBDBD;
+  --color-jonaki-text-muted: #7A7A7A;
+  --color-jonaki-surface: #111111;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans bg-jonaki-bg text-jonaki-text-primary antialiased;
+  }
+}
+
+@layer components {
+  .section-divider {
+    @apply h-px w-full;
+    background: linear-gradient(90deg, transparent, #D1FF4D, transparent);
+  }
+
+  .jonaki-glow-shadow {
+    box-shadow: 0 0 15px rgba(209, 255, 77, 0.3);
+  }
+}
